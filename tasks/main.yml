@@ -1,0 +1,7 @@
+---
+- include: install-java.yml
+- include: create-teamcity-user.yml
+- include: postgresql-connector.yml
+- include: teamcity-server.yml
+- include: install-plugins.yml
+- include: license.yml

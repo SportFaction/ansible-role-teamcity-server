@@ -1,0 +1,21 @@
+# INSTALL JAVA 8
+# - name: Add Oracle Java Repository
+#   apt_repository: repo='ppa:webupd8team/java'
+
+# - name: Accept Java 8 Licence
+#   shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | tee /etc/oracle-java-8-licence-acceptance | /usr/bin/debconf-set-selections
+#   args:
+#     creates: /etc/oracle-java-8-licence-acceptance
+
+- name: Install Oracle Java 8
+  apt: name={{item}} state=latest
+  with_items:
+    - openjdk-8-jdk
+
+  
+# Environment setup.
+- name: Set JAVA_HOME if configured.
+  template:
+    src: java_home.sh.j2
+    dest: /etc/profile.d/java_home.sh
+    mode: 0644

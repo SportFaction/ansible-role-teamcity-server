@@ -1,0 +1,13 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: adlm
+  description: Teamcity for Ubuntu.
+  company: "Sport Faction"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.0
+  platforms:
+  - name: Ubuntu
+    versions:
+    - xenial

@@ -1,0 +1,15 @@
+#/lib/systemd/system
+[Unit]
+Description="TeamCity Server"
+
+[Service]
+Type=forking
+User={{ teamcity_server_su_user }}
+PIDFile={{ teamcity_server_dir }}/logs/teamcity.pid
+ExecStart={{ teamcity_server_dir }}/bin/teamcity-server.sh start
+ExecStop={{ teamcity_server_dir }}/bin/teamcity-server.sh stop
+Environment="TEAMCITY_DATA_PATH=/opt/TeamCity/.BuildServer"
+EnvironmentFile=-/etc/sysconfig/teamcity
+
+[Install]
+WantedBy=multi-user.target

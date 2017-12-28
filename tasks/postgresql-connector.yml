@@ -1,0 +1,17 @@
+---
+
+- name: "Create jdbc dir"
+  file:
+    path: "{{ teamcity_server_postgresql_jdbc_dir }}"
+    state: directory
+    owner: "{{ teamcity_server_user }}"
+    group: "{{ teamcity_server_group }}"
+    mode: 0755
+
+- name: Download file from a file path
+  get_url:
+    url: "https://jdbc.postgresql.org/download/postgresql-{{ teamcity_server_postgresql_connector_version }}.jar"
+    dest: "{{ teamcity_server_postgresql_jdbc_dir }}/postgresql-{{ teamcity_server_postgresql_connector_version }}.jar"
+
+
+

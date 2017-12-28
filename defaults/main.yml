@@ -1,0 +1,43 @@
+---
+java_home: "/usr/lib/jvm/java-1.8.0-openjdk-amd64"
+
+# Teamcity Version
+teamcity_server_version: 2017.1.2
+teamcity_server_sha256: 81943dd664eff4fec6a38ebc6e5cf27155c9da7aa224ef0a142ee16e0dc42e03
+
+# TeamCity User
+teamcity_server_su_user: teamcity
+teamcity_server_su_password: teamcity
+
+# TeamCity Dirs
+teamcity_server_install_dir: /opt
+teamcity_server_dir: "{{ teamcity_server_install_dir }}/TeamCity"
+teamcity_server_data_dir: "{{ teamcity_server_dir }}/.BuildServer"
+teamcity_server_plugins_dir: "{{ teamcity_server_data_dir }}/plugins"
+teamcity_server_config_dir: "{{ teamcity_server_data_dir }}/config"
+teamcity_agent_install_dir: "{{ teamcity_server_install_dir }}/buildAgent"
+
+# TeamCity Plugins
+teamcity_server_plugins: []
+
+# Teamcity Licenses
+teamcity_server_license_keys: []
+
+# PostgreSQL Connector
+teamcity_server_postgresql_connector_version: 42.1.4
+teamcity_server_postgresql_jdbc_dir: "{{ teamcity_server_data_dir }}/lib/jdbc"
+
+# PostgreSQL Database User
+teamcity_server_postgresql_db_user: teamcity
+teamcity_server_postgresql_db_password: teamcity
+teamcity_server_postgresql_db_name: teamcity
+
+# PostgreSQL DB Server
+teamcity_server_postgresql_database_url: localhost
+teamcity_server_postgresql_database_port: 5432
+
+# Teamcity Agent
+teamcity_agent_hostname: "{{ ansible_default_ipv4.address }}"
+
+
+
