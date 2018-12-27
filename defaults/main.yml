@@ -2,7 +2,7 @@
 java_home: "/usr/lib/jvm/java-1.8.0-openjdk-amd64"
 
 # Teamcity Version
-teamcity_server_version: 2018.2
+teamcity_server_version: 2017.1.2
 teamcity_server_sha256: 21d680d2a4ef4d2ee6c60f4429e450a547cec1364052cd7935754b1cb32e947a
 
 # TeamCity User
