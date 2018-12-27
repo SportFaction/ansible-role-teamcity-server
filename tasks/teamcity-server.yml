@@ -1,7 +1,7 @@
 ---
 - name: "Get distribution"
   get_url:
-    url: "http://download.jetbrains.com/teamcity/TeamCity-{{ teamcity_server_version }}.tar.gz"
+    url: "https://download.jetbrains.com/teamcity/TeamCity-{{ teamcity_server_version }}.tar.gz"
     dest: "/tmp/TeamCity-{{ teamcity_server_version }}.tar.gz"
     validate_certs: no
     timeout: 60
